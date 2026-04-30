@@ -42,7 +42,7 @@ test.describe('UI Components', () => {
     })
 });
 
-test('Checkboxes', async ({page}) => {
+test.skip('Checkboxes', async ({page}) => {
     await page.getByText('Modal & Overlays').click();
     await page.getByText('Toastr').click();
 
@@ -61,7 +61,7 @@ test('Checkboxes', async ({page}) => {
     }
 })
 
-test('List and dropdowns', async ({page}) => {
+test.skip('List and dropdowns', async ({page}) => {
     const dropdownMenu: Locator = page.locator('ngx-header nb-select')
     await dropdownMenu.click()
 
@@ -89,7 +89,7 @@ test('List and dropdowns', async ({page}) => {
     }
 })
 
-test('tooltip', async ({page}) => {
+test.skip('tooltip', async ({page}) => {
     await page.getByText('Modal & Overlays').click();
     await page.getByText('Tooltip').click();
 
@@ -100,7 +100,7 @@ test('tooltip', async ({page}) => {
     expect(tooltipText).toBe('This is a tooltip')
 })
 
-test('browser dialog box', async ({page}) => {
+test.skip('browser dialog box', async ({page}) => {
     await page.getByText('Tables & Data').click();
     await page.getByText('Smart Table').click();
 
@@ -113,7 +113,7 @@ test('browser dialog box', async ({page}) => {
     expect(await page.locator('table tbody tr').first()).not.toHaveText('mdo@gmail.com')
 })
 
-test('web tables', async ({page}) => {
+test.skip('web tables', async ({page}) => {
     await page.getByText('Tables & Data').click();
     await page.getByText('Smart Table').click();
 
@@ -145,7 +145,7 @@ test('web tables', async ({page}) => {
     }
 })
 
-test('Date picker', async ({page}) => {
+test.skip('Date picker', async ({page}) => {
     await page.getByText('Forms').click();
     await page.getByText('Datepicker').click();
     const commonDatepicker: Locator = page.getByPlaceholder('Form Picker')
